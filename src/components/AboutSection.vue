@@ -1,0 +1,61 @@
+<script setup>
+import SectionHeader from "./common/SectionHeader.vue";
+</script>
+
+<template>
+  <div id="about" class="section-anchor"></div>
+  <div class="about-container d-flex flex-column">
+    <SectionHeader
+      title="Know More About Me"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus massa, imperdiet eu convallis eu, semper quis est. Pellentesque auctor pharetra lectus. Aenean cursus sem ante, eu elementum quam luctus ut. Nulla imperdiet semper justo sit amet rutrum. Vivamus."
+    />
+    <div class="about-section-main container-fluid bg-success flex-grow-1">
+      <div class="row h-100">
+        <div class="col-4 bg-primary p-0 pe-2 py-3">
+          <div class="card h-100">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card’s content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-8 h-100 bg-secondary p-0 ps-2 py-3">
+            <div class="card h-100">
+                <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Much longer nav link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.about-container {
+  height: 700px;
+  background-color: navajowhite;
+  scroll-margin-top: 80px;
+}
+.about-section-main {
+}
+</style>

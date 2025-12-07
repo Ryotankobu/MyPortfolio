@@ -4,10 +4,10 @@
 </script>
 
 <template>
-  <div class="hero-container container-fluid">
+  <div class="hero-container container-fluid py-5">
     <div class="row d-flex align-items-stretch">
       <div
-        class="col-7 pt-4 pb-4 px-0 pe-2 d-flex"
+        class="col-7 px-0 pe-2 d-flex"
         style="background-color: pink"
       >
         <div class="card w-100 h-100">
@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="col-5 pt-4 pb-4 px-0 ps-2 d-flex" style="background-color: plum">
+      <div class="col-5 px-0 ps-2 d-flex" style="background-color: plum">
         <div class="card w-100 h-100">
           
           <div class="card-body p-4 d-flex flex-column">

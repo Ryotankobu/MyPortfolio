@@ -1,15 +1,23 @@
 <script setup>
 import Navbar from "./components/Navbar.vue";
 import HomeView from "./views/HomeView.vue";
+import { ref } from "vue";
+
+const currentSection = ref('here')
+const handleSectionChange = (section) => {
+    currentSection.value = section
+}
 </script>
 
 <template>
     <div class="page">
         <div class="navbar">
-             <Navbar />
+             <Navbar :currentSection="currentSection"/>
         </div>
         <div class="main-container">
-            <router-view></router-view>
+            <router-view v-slot="{Component}">
+                <component :is="Component" @section-change="handleSectionChange" />
+            </router-view>
         </div>
     </div>
     

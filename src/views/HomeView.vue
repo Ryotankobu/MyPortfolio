@@ -1,10 +1,38 @@
 <script setup>
+import { onMounted } from 'vue'
 import AboutSection from '@/components/AboutSection.vue';
 import ContactSection from '@/components/ContactSection.vue';
 import ExperienceSection from '@/components/ExperienceSection.vue';
 import FooterSection from '@/components/FooterSection.vue';
 import HeroSection from '@/components/HeroSection.vue';
 import ProjectSection from '@/components/ProjectSection.vue';
+
+
+const emit = defineEmits(['sectionChange'])
+
+const sectionIds = ['hero', 'about', 'experience', 'project', 'contact']
+
+onMounted(() => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    emit('sectionChange', entry.target.id)
+                }
+            })
+        },
+        {
+            threshold: 0.5,
+        }
+    )
+
+    sectionIds.forEach((id) => {
+        const el=document.getElementById(id)
+        if (el) {
+            observer.observe(el)
+        }
+    })
+})
 </script>
 
 <template>

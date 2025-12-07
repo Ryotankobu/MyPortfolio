@@ -1,37 +1,50 @@
-<script setup></script>
+<script setup>
+  import Button from './common/Button.vue';
+  import sampleImage from '@/assets/images/bellsprout.png';
+</script>
 
 <template>
   <div class="hero-container container-fluid">
-    <div class="row d-flex h-100">
+    <div class="row d-flex align-items-stretch">
       <div
-        class="col-7 h-100 pt-4 pb-4 px-0 pe-2"
+        class="col-7 pt-4 pb-4 px-0 pe-2 d-flex"
         style="background-color: pink"
       >
-        <div class="card w-100 h-100" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">
+        <div class="card w-100 h-100">
+          <div class="card-body p-4 d-flex flex-column">
+            <h3 class="card-title mb-0">Lorem ipsum dolor sit.</h3>
+            <!-- <h6 class="card-subtitle mb-2 text-body-secondary">
               Card subtitle
-            </h6>
+            </h6> -->
+            <h1 class="display-1 bold fw-bold">Ryota Ando</h1>
+            <h3 class="card-title mt-3">Lorem ipsum dolor sit.</h3>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card’s content.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus massa, imperdiet eu convallis eu, semper quis est. Pellentesque auctor pharetra lectus. Aenean cursus sem ante, eu elementum quam luctus ut. Nulla imperdiet semper justo sit amet rutrum. Vivamus placerat orci eu ligula tincidunt, id facilisis justo pharetra. Donec ornare enim sed libero scelerisque pulvinar. Quisque elementum lacus eget felis ullamcorper rhoncus. Donec condimentum porttitor tristique. Pellentesque eleifend vitae nulla vel interdum. Integer dui.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus massa, imperdiet eu convallis eu, semper quis est. Pellentesque auctor pharetra lectus. Aenean cursus sem ante, eu elementum quam luctus ut. Nulla imperdiet semper justo sit amet rutrum. Vivamus placerat orci eu ligula tincidunt, id facilisis justo pharetra. Donec ornare enim sed libero scelerisque pulvinar. Quisque elementum lacus eget felis ullamcorper rhoncus. Donec condimentum porttitor tristique. Pellentesque eleifend vitae nulla vel interdum. Integer dui.
             </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <div class="row mt-auto">
+              <div class="col-6">
+                <Button title="test"/>
+              </div>
+              <div class="col-6">
+                <Button title="test"/>
+              </div>
+            </div>
+         
           </div>
         </div>
       </div>
-      <div class="col-5 pt-4 pb-4 px-0 ps-2" style="background-color: plum">
+      <div class="col-5 pt-4 pb-4 px-0 ps-2 d-flex" style="background-color: plum">
         <div class="card w-100 h-100">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card’s content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+          
+          <div class="card-body p-4 d-flex flex-column">
+            <img :src="sampleImage" class="card-img-top w-100 hero-image mx-auto d-block" alt="..." />
+            <div class="border rounded mt-2 mb-4">
+              <p>section1</p>
+            </div>
+            <div class="border rounded">
+              <p>section2</p>
+            </div>
+          
           </div>
         </div>
       </div>
@@ -41,7 +54,12 @@
 
 <style scoped>
 .hero-container {
-  height: 500px;
+  
   background-color: green;
+}
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 }
 </style>

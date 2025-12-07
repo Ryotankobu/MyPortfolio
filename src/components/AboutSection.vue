@@ -4,14 +4,14 @@ import SectionHeader from "./common/SectionHeader.vue";
 
 <template>
   <div id="about" class="section-anchor"></div>
-  <div class="about-container d-flex flex-column">
+  <div class="about-container d-flex flex-column py-5">
     <SectionHeader
       title="Know More About Me"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus massa, imperdiet eu convallis eu, semper quis est. Pellentesque auctor pharetra lectus. Aenean cursus sem ante, eu elementum quam luctus ut. Nulla imperdiet semper justo sit amet rutrum. Vivamus."
     />
     <div class="about-section-main container-fluid bg-success flex-grow-1">
       <div class="row h-100">
-        <div class="col-4 bg-primary p-0 pe-2 py-3">
+        <div class="col-4 bg-primary p-0 pe-2">
           <div class="card h-100">
             <img src="..." class="card-img-top" alt="..." />
             <div class="card-body">
@@ -25,7 +25,7 @@ import SectionHeader from "./common/SectionHeader.vue";
           </div>
         </div>
 
-        <div class="col-8 h-100 bg-secondary p-0 ps-2 py-3">
+        <div class="col-8 h-100 bg-secondary p-0 ps-2">
             <div class="card h-100">
                 <ul class="nav nav-pills nav-fill">
             <li class="nav-item">

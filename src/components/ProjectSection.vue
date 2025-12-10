@@ -5,7 +5,7 @@ import SectionHeader from './common/SectionHeader.vue';
 <template>
     <div id="project" class="section-anchor"></div>
     <div class="project-container">
-        <div class="experience-container d-flex flex-column py-5">
+        <div class="experience-container d-flex flex-column py-5 px-5">
         <SectionHeader 
         title="My Projects"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus massa, imperdiet eu convallis eu, semper quis est. Pellentesque auctor pharetra lectus. Aenean cursus sem ante, eu elementum quam luctus ut. Nulla imperdiet semper justo sit amet rutrum. Vivamus."

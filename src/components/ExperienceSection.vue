@@ -1,10 +1,11 @@
 <script setup>
 import SectionHeader from "./common/SectionHeader.vue";
+import TextMarquee from "./common/TextMarquee.vue";
 </script>
 
 <template>
   <div id="experience" class="section-anchor"></div>
-  <div class="experience-container d-flex flex-column py-5">
+  <div class="experience-container d-flex flex-column py-5 px-5">
     <SectionHeader
       title="What I experienced"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus massa, imperdiet eu convallis eu, semper quis est. Pellentesque auctor pharetra lectus. Aenean cursus sem ante, eu elementum quam luctus ut. Nulla imperdiet semper justo sit amet rutrum. Vivamus."
@@ -190,6 +191,8 @@ import SectionHeader from "./common/SectionHeader.vue";
         </div>
       </div>
     </div>
+
+    
   </div>
 </template>
 

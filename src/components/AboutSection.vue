@@ -5,7 +5,7 @@ import sampleImage from "@/assets/images/bellsprout.png";
 
 <template>
   <div id="about" class="section-anchor"></div>
-  <div class="about-container d-flex flex-column py-5">
+  <div class="about-container d-flex flex-column py-5 px-5">
     <SectionHeader
       title="Know More About Me"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus massa, imperdiet eu convallis eu, semper quis est. Pellentesque auctor pharetra lectus. Aenean cursus sem ante, eu elementum quam luctus ut. Nulla imperdiet semper justo sit amet rutrum. Vivamus."

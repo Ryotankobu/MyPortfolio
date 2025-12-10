@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="hero-container container-fluid py-5">
+  <div class="hero-container container-fluid py-5 px-5">
     <div class="row d-flex align-items-stretch">
       <div
         class="col-7 px-0 pe-2 d-flex"

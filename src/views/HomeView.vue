@@ -6,6 +6,7 @@ import ExperienceSection from '@/components/ExperienceSection.vue';
 import FooterSection from '@/components/FooterSection.vue';
 import HeroSection from '@/components/HeroSection.vue';
 import ProjectSection from '@/components/ProjectSection.vue';
+import TextMarquee from '../components/common/TextMarquee.vue'
 
 
 const emit = defineEmits(['sectionChange'])
@@ -39,6 +40,9 @@ onMounted(() => {
     <HeroSection />
     <AboutSection />
     <ExperienceSection />
+    <TextMarquee 
+    text="This is a continuously ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssscrolling sentence without stopping!"
+    :duration="80"/>
     <ProjectSection />
     <ContactSection />
     <FooterSection />

@@ -38,7 +38,7 @@ const handleSectionChange = (section) => {
     background-color: red;
     width: 100%;
     box-sizing: border-box;
-    padding-left: 40px;
-    padding-right: 40px;
+    /* padding-left: 40px;
+    padding-right: 40px; */
 }
 </style>

@@ -10,7 +10,7 @@
         class="col-7 px-0 pe-2 d-flex"
         style="background-color: pink"
       >
-        <div class="card w-100 h-100">
+        <div class="card w-100 h-100 bg-success">
           <div class="card-body p-4 d-flex flex-column">
             <h3 class="card-title mb-0">Lorem ipsum dolor sit.</h3>
             <!-- <h6 class="card-subtitle mb-2 text-body-secondary">

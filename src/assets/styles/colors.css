@@ -1,0 +1,41 @@
+:root {
+    /* Entire Page */
+    --main-background: rgb(253, 231, 204);
+
+    /* Button Component */
+    --button-background: #ff6666;
+
+    /* Skill Button Component */
+    --skill-button-background-before: #685430;
+    --skill-button-background-after: #604314;
+
+    /* TextMarquee */
+    --text-marquee-background: rgb(67, 127, 16);
+
+    /* Navbar */
+    --navbar-background: #4c4693;
+    --navbar-button-active: #7c799e;
+    --navbar-text: white;
+
+    /* Hero Section */
+    --shadow-color: black;
+    --hero-card-yellow: rgb(232, 153, 28);
+
+    /* About Section */
+    --left-about-card: rgb(31, 231, 160);
+    --skill-box: #f39494;
+
+    /* Experience Section */
+    --experience-section-background: rgb(53, 183, 216);
+    --work-experience-background: rgb(232, 153, 28);
+    --study-experience-background: rgb(31, 231, 160);
+
+    /* Contact Section */
+    --contact-section-background: peru;
+    --contact-details-background: rgb(31, 231, 160);
+
+  --color-secondary: #e8991c;
+  --color-bg: #fde7cc;
+  --color-dark: #1a1a1a;
+  --color-light: #ffffff;
+}

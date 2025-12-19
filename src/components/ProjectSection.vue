@@ -11,10 +11,10 @@ import sampleImage from "@/assets/images/bellsprout.png";
         title="My Projects"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus massa, imperdiet eu convallis eu, semper quis est. Pellentesque auctor pharetra lectus. Aenean cursus sem ante, eu elementum quam luctus ut. Nulla imperdiet semper justo sit amet rutrum. Vivamus."
     />
-        <div class="project-section-main container-fluid bg-success">
-            <div class="row pt-5">
-                <div class="col-4 p-0 pe-2">
-                    <div class="card">
+        <div class="project-section-main container-fluid">
+            <div class="row">
+                <div class="col-4 p-0 pe-3">
+                    <div class="card h-100 border-dark border-3">
                         <img class="card-img-top w-50 mx-auto d-block" :src="sampleImage" alt="Card image cap">
                         <div class="card-body">
                             <div class="language-section d-flex flex-row mb-2">
@@ -39,8 +39,8 @@ import sampleImage from "@/assets/images/bellsprout.png";
                     </div>
                 </div>
 
-                <div class="col-4 p-0 pe-2">
-                    <div class="card">
+                <div class="col-4 p-0 px-3">
+                    <div class="card h-100 border-dark border-3">
                         <img class="card-img-top w-50 mx-auto d-block" :src="sampleImage" alt="Card image cap">
                         <div class="card-body">
                             <div class="language-section d-flex flex-row mb-2">
@@ -65,8 +65,8 @@ import sampleImage from "@/assets/images/bellsprout.png";
                     </div>
                 </div>
 
-                <div class="col-4 p-0 pe-2">
-                    <div class="card">
+                <div class="col-4 p-0 ps-3">
+                    <div class="card h-100 border-dark border-3">
                         <img class="card-img-top w-50 mx-auto d-block" :src="sampleImage" alt="Card image cap">
                         <div class="card-body">
                             <div class="language-section d-flex flex-row mb-2">
@@ -97,8 +97,8 @@ import sampleImage from "@/assets/images/bellsprout.png";
 
 
              <div class="row pt-5">
-                <div class="col-4 p-0 pe-2">
-                    <div class="card">
+                <div class="col-4 p-0 pe-3">
+                    <div class="card h-100 border-dark border-3">
                         <img class="card-img-top w-50 mx-auto d-block" :src="sampleImage" alt="Card image cap">
                         <div class="card-body">
                             <div class="language-section d-flex flex-row mb-2">
@@ -123,8 +123,8 @@ import sampleImage from "@/assets/images/bellsprout.png";
                     </div>
                 </div>
 
-                <div class="col-4 p-0 pe-2">
-                    <div class="card">
+                <div class="col-4 p-0 px-3">
+                    <div class="card h-100 border-dark border-3">
                         <img class="card-img-top w-50 mx-auto d-block" :src="sampleImage" alt="Card image cap">
                         <div class="card-body">
                             <div class="language-section d-flex flex-row mb-2">
@@ -149,8 +149,8 @@ import sampleImage from "@/assets/images/bellsprout.png";
                     </div>
                 </div>
 
-                <div class="col-4 p-0 pe-2">
-                    <div class="card">
+                <div class="col-4 p-0 ps-3">
+                    <div class="card h-100 border-dark border-3">
                         <img class="card-img-top w-50 mx-auto d-block" :src="sampleImage" alt="Card image cap">
                         <div class="card-body">
                             <div class="language-section d-flex flex-row mb-2">
@@ -183,8 +183,42 @@ import sampleImage from "@/assets/images/bellsprout.png";
 </template>
 
 <style scoped>
-.project-container {
-    /* height: 500px; */
-    background-color: indianred;
+
+.card {
+    transition: all 0.3s;
 }
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 5px 5px;
+}
+.language-box {
+font-family: "Press Start 2P", system-ui;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 0.7rem;
+}
+.card-title {
+    font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.card-text {
+    font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9em;
+}
+.btn {
+    font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1em;
+  font-weight: bold;
+}
+
 </style>

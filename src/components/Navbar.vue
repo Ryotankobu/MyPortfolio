@@ -9,10 +9,10 @@ const props = defineProps({
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg navbar-background">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <h2>My Portfolio</h2>
+        <h2 style="color: var(--navbar-text)">My Portfolio</h2>
       </a>
       <button
         class="navbar-toggler"
@@ -28,35 +28,40 @@ const props = defineProps({
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav gap-3">
-          <li class="nav-item border rounded-4 px-2">
+          <li class="nav-item border px-2" :class="{active: props.currentSection === 'about'}">
             <RouterLink 
               class="nav-link" 
               :class="{active: props.currentSection === 'about'}"
-              :to="{name: 'homeView', hash: '#about'}">
+              :to="{name: 'homeView', hash: '#about'}"
+              style="color: var(--navbar-text)">
+              
               ABOUT
             </RouterLink>
           </li>
-          <li class="nav-item border rounded-4 px-2">
+          <li class="nav-item border px-2" :class="{active: props.currentSection === 'experience'}">
             <RouterLink 
               class="nav-link" 
               :class="{active: props.currentSection === 'experience'}"
-              :to="{name: 'homeView', hash: '#experience'}">
+              :to="{name: 'homeView', hash: '#experience'}"
+              style="color: var(--navbar-text)">
               EXPERIENCE
             </RouterLink>
           </li>
-          <li class="nav-item  border rounded-4 px-2">
+          <li class="nav-item  border px-2" :class="{active: props.currentSection === 'project'}">
             <RouterLink 
               class="nav-link" 
               :class="{active: props.currentSection === 'project'}"
-              :to="{name: 'homeView', hash: '#project'}">
+              :to="{name: 'homeView', hash: '#project'}"
+              style="color: var(--navbar-text)">
               PROJECT
             </RouterLink>
           </li>
-          <li class="nav-item  border rounded-4 px-2">
+          <li class="nav-item  border px-2" :class="{active: props.currentSection === 'contact'}">
             <RouterLink 
               class="nav-link" 
               :class="{active: props.currentSection === 'contact'}"
-              :to="{name: 'homeView', hash: '#contact'}">
+              :to="{name: 'homeView', hash: '#contact'}"
+              style="color: var(--navbar-text)">
               CONTACT
             </RouterLink>
           </li>
@@ -70,18 +75,38 @@ const props = defineProps({
 .navbar {
   padding-left: 40px;
   padding-right: 40px;
+  
+}
+.navbar-background {
+  background-color: var(--navbar-background);
 }
 .navbar-collapse {
-  background-color: var(--bs-tertiary-bg) !important;
+  background-color: var(--navbar-background) !important;
 }
 .container-fluid {
   padding: 0;
+  
 }
 .nav-link.active {
   font-weight: bold;
   text-decoration: underline;
 }
 .nav-item {
-  
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 50% 10% 50% 10% / 10% 50% 10% 50%;
+
+}
+.nav-item.active {
+  transform: rotate(4deg);
+  scale: (1.2);
+  background-color: var(--navbar-button-active);
+
+}
+h2 {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 </style>

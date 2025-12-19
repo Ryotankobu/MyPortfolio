@@ -25,6 +25,10 @@ const handleSectionChange = (section) => {
 </template>
 
 <style scoped>
+:global(html),
+:global(body) {
+  overflow-x: hidden;
+}
 .navbar {
     position: fixed;
     top: 0;
@@ -35,7 +39,7 @@ const handleSectionChange = (section) => {
 }
 .main-container {
     margin-top: 80px;
-    background-color: red;
+    background-color: var(--main-background);
     width: 100%;
     box-sizing: border-box;
     /* padding-left: 40px;

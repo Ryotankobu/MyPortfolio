@@ -1,15 +1,17 @@
 <script setup>
 defineProps({
   text: { type: String, required: true },
-  duration: { type: Number, default: 15 },
+  duration: { type: Number, default: 30 },
 });
 </script>
 
 <template>
-  <div class="marquee-wrapper">
+  <div class="marquee-wrapper py-0 my-0">
     <div class="marquee-track" :style="{ animationDuration: `${duration}s` }">
-      <span class="marquee-text fw-bold display-4 py-4">{{ text }}</span>
-      <span class="marquee-text fw-bold display-4 py-4">{{ text }}</span>
+      <span class="marquee-text fw-bold pt-4">{{ text }}</span>
+      <span class="marquee-text fw-bold pt-4">{{ text }}</span>
+      <span class="marquee-text fw-bold pt-4">{{ text }}</span>
+      <span class="marquee-text fw-bold pt-4">{{ text }}</span>
     </div>
   </div>
 </template>
@@ -20,7 +22,6 @@ defineProps({
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  background-color: var(--text-marquee-background);
 }
 .marquee-track {
   display: inline-flex;
@@ -28,11 +29,16 @@ defineProps({
   animation-name: marquee;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  display: flex;
+  align-items: flex-end;
+ 
 }
 .marquee-text {
-  padding-right: 2rem;
+  padding-right: 8rem;
   white-space: nowrap;
-  color: var(--navbar-text);
+  color: var(--experience-section-background);
+  line-height: 0.7;
+  font-size: 8rem;
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;

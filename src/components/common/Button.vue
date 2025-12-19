@@ -7,7 +7,7 @@
 
 <template>
     <div class="wrapper">
-        <button type="button" class="btn w-100">{{ title }}</button>
+        <button type="button" class="btn w-100"><span>{{ title }}</span></button>
 
     </div>
     
@@ -28,17 +28,21 @@ button {
  margin: 0.5em 0;
  padding: 0.8em 2.2em;
  cursor: pointer;
- background: #585858;
+ background: var(--button-background);
  border: none;
  border-radius: 0.4em;
  text-transform: uppercase;
  font-size: 19px;
  font-family: "Work Sans", sans-serif;
- font-weight: 500;
+ font-weight: 1000;
  letter-spacing: 0.04em;
  mix-blend-mode: color-dodge;
  perspective: 500px;
  transform-style: preserve-3d;
+}
+button span {
+  mix-blend-mode: none;
+  color: var(--navbar-background); 
 }
 
 button:before, button:after {
@@ -51,7 +55,7 @@ button:before, button:after {
  width: 100%;
  height: 100%;
  opacity: 0;
- mix-blend-mode: inherit;
+ mix-blend-mode: color-dodge;
  border-radius: inherit;
  transform-style: preserve-3d;
  transform: translate3d(calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));

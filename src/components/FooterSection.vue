@@ -4,10 +4,10 @@
 
 <template>
     <footer class="footer d-flex text-center flex-column py-5">
-        <div class="logo-area bg-danger mx-auto">
+        <div class="logo-area mx-auto">
             <div class="image-box mb-3">
                 
-                <h2>My Portfolio</h2>
+                <h2 style="color: var(--navbar-text)">My Portfolio</h2>
 
             </div>
             
@@ -58,12 +58,17 @@
 
 <style scoled>
 .footer {
-    background-color: aquamarine;
+  background-color: var(--navbar-background);
 }
 .footer p {
     margin-top: 0;
 }
 .logo-area {
 
+}
+h2 {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 </style>

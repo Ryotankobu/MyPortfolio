@@ -7,6 +7,7 @@ import FooterSection from '@/components/FooterSection.vue';
 import HeroSection from '@/components/HeroSection.vue';
 import ProjectSection from '@/components/ProjectSection.vue';
 import TextMarquee from '../components/common/TextMarquee.vue'
+import TextMarqueeSlow from '@/components/common/TextMarqueeSlow.vue';
 
 
 const emit = defineEmits(['sectionChange'])
@@ -38,7 +39,11 @@ onMounted(() => {
 
 <template>
     <HeroSection />
+    <TextMarquee 
+    text="Studied full‑time, worked nights, stayed focused. No shortcuts."
+    :duration="20"/>
     <AboutSection />
+    <TextMarqueeSlow text="RYOTA ANDO" />
     <ExperienceSection />
     <TextMarquee 
     text="This is a continuously ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssscrolling sentence without stopping!"

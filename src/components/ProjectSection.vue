@@ -3,6 +3,10 @@ import SectionHeader from "./common/SectionHeader.vue";
 import sampleImage from "@/assets/images/bellsprout.png";
 import projects from "@/assets/data/projects.json";
 import { ref, computed } from "vue";
+// icons for SectionHeader
+import icon1 from '@/assets/images/bellsprout.png'
+import icon2 from '@/assets/images/bellsprout.png'
+import icon3 from '@/assets/images/bellsprout.png'
 
 const modalShowingProjectId = ref("");
 const modalContents = computed(() =>
@@ -29,6 +33,18 @@ const truncatedDescription = computed(() => {
   
 }
 )
+
+const leftIcons = [
+  { src: icon1, left: '30%', top: '10%', transform: 'rotate(-20deg)' },
+  { src: icon2, left: '55%', top: '45%', transform: 'rotate(20deg)' },
+  { src: icon3, left: '5%', top: '50%', transform: 'rotate(10deg)' },
+]
+
+const rightIcons = [
+  { src: icon1, left: '60%', top: '50%', transform: 'rotate(30deg)' },
+  { src: icon2, left: '10%', top: '30%', transform: 'rotate(-20deg)' },
+  { src: icon3, left: '45%', top: '10%', transform: 'rotate(10deg)' },
+]
 </script>
 
 <template>
@@ -37,8 +53,10 @@ const truncatedDescription = computed(() => {
     <div class="experience-container d-flex flex-column py-5 px-5">
       <SectionHeader
         title="My Projects"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus massa, imperdiet eu convallis eu, semper quis est. Pellentesque auctor pharetra lectus. Aenean cursus sem ante, eu elementum quam luctus ut. Nulla imperdiet semper justo sit amet rutrum. Vivamus."
-      />
+        description="Here you’ll find a mix of university projects and self‑directed work I created while expanding my skills beyond the classroom."
+        :left-icons="leftIcons"
+        :right-icons="rightIcons"
+        />
       <div class="project-section-main container-fluid">
         <div class="row g-5">
           <div

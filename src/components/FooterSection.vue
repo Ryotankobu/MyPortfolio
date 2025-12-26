@@ -12,27 +12,27 @@
             </div>
             
             <div class="icon-box">
-                  <div class="row justify-content-center">
-                    <div class="col-1">
-                      <img
-                        :src="sampleImage"
-                        class="card-img-top w-25"
-                        alt="..."
-                      />
+                  <div class="d-flex flex-row justify-content-center">
+                    <div class="mx-2">
+                      <a href="https://www.google.com"  target="_blank" rel="noopener"
+                        data-toggle="tooltip" data-placement="bottom" title="GitHub">
+                        <i class="fa-brands fa-square-github fa-xl text-light"></i>
+                      </a>
+                      
                     </div>
-                    <div class="col-1">
-                      <img
-                        :src="sampleImage"
-                        class="card-img-top w-25"
-                        alt="..."
-                      />
+                    <div class="mx-2">
+                      <a href="https://www.google.com"  target="_blank" rel="noopener"
+                        data-toggle="tooltip" data-placement="bottom" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin fa-xl text-light"></i>
+                      </a>
+                      
                     </div>
-                    <div class="col-1">
-                      <img
-                        :src="sampleImage"
-                        class="card-img-top w-25"
-                        alt="..."
-                      />
+                    <div class="mx-2">
+                      <a href="https://www.google.com"  target="_blank" rel="noopener"
+                        data-toggle="tooltip" data-placement="bottom" title="Resume">
+                        <i class="fa-solid fa-file fa-xl text-light"></i>
+                      </a>
+                      
                     </div>
                   </div>
                 </div>

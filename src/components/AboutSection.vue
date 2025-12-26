@@ -7,6 +7,10 @@ import SkillButton from "./common/SkillButton.vue";
 import SkillboxAreaProgramming from './common/SkillboxAreaProgramming.vue';
 import SkillboxAreaBa from './common/SkillboxAreaBa.vue';
 import SkillboxAreaOthers from './common/SkillboxAreaOthers.vue';
+// icons for SectionHeader
+import icon1 from '@/assets/images/sectionHeaderIcons/ryotaLogo.png'
+import icon2 from '@/assets/images/sectionHeaderIcons/ryotaLogo.png'
+import icon3 from '@/assets/images/sectionHeaderIcons/ryotaLogo.png'
 
 const leftColRef = ref(null)
 const rightColRef = ref(null)
@@ -52,6 +56,18 @@ onBeforeUnmount(() => {
   if (leftColRef.value) observer.unobserve(leftColRef.value)
   if (rightColRef.value) observer.unobserve(rightColRef.value)
 })
+
+const leftIcons = [
+  { src: icon1, left: '15%', top: '%', transform: 'rotate(-20deg)' },
+  { src: icon2, left: '45%', top: '35%', transform: 'rotate(20deg)' },
+  { src: icon3, left: '%0', top: '40%', transform: 'rotate(10deg)' },
+]
+
+const rightIcons = [
+  { src: icon1, left: '60%', top: '40%', transform: 'rotate(30deg)' },
+  { src: icon2, left: '10%', top: '20%', transform: 'rotate(-20deg)' },
+  { src: icon3, left: '45%', top: '0%', transform: 'rotate(10deg)' },
+]
 </script>
 
 <template>
@@ -60,7 +76,9 @@ onBeforeUnmount(() => {
     <SectionHeader
       title="Know More About Me"
       description="As a mature‑age developer, I bring discipline, clarity, and a practical mindset to my work. My skills span front‑end development, business analysis, and communication — shaped by both technical training and diverse professional experience."
-    />
+    :left-icons="leftIcons"
+    :right-icons="rightIcons"
+      />
     <div class="about-section-main container-fluid flex-grow-1">
       <div class="row h-100">
         <div 

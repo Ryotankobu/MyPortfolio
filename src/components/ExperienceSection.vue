@@ -1,7 +1,65 @@
 <script setup>
+  import { ref, onMounted, onBeforeUnmount } from 'vue'
 import SectionHeader from "./common/SectionHeader.vue";
 import TextMarquee from "./common/TextMarquee.vue";
 import workExperienceBackground from "../assets/images/windowGreen.png";
+// icons for SectionHeader
+import icon1 from '@/assets/images/bellsprout.png'
+import icon2 from '@/assets/images/bellsprout.png'
+import icon3 from '@/assets/images/bellsprout.png'
+
+const workExperienceCardRef = ref(null)
+const studyExperienceCardRef = ref(null)
+
+const workExperienceCardVisible = ref(false)
+const studyExperienceCardVisible = ref(false)
+
+let observer = null
+
+onMounted(() => {
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+
+        if (entry.target === workExperienceCardRef.value) {
+          workExperienceCardVisible.value = true
+          observer.unobserve(entry.target) // only animate once
+        }
+        if (entry.target === studyExperienceCardRef.value) {
+          studyExperienceCardVisible.value = true
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    {
+      threshold: 0.3, // trigger when ~30% of the column is visible
+    }
+  )
+
+  if (workExperienceCardRef.value) observer.observe(workExperienceCardRef.value)
+  if (studyExperienceCardRef.value) observer.observe(studyExperienceCardRef.value)
+})
+
+onBeforeUnmount(() => {
+  if (!observer) return
+  if (workExperienceCardRef.value) observer.unobserve(workExperienceCardRef.value)
+  if (studyExperienceCardRef.value) observer.unobserve(studyExperienceCardRef.value)
+})
+
+const leftIcons = [
+  { src: icon1, left: '30%', top: '10%', transform: 'rotate(-20deg)' },
+  { src: icon2, left: '55%', top: '45%', transform: 'rotate(20deg)' },
+  { src: icon3, left: '5%', top: '50%', transform: 'rotate(10deg)' },
+]
+
+const rightIcons = [
+  { src: icon1, left: '60%', top: '50%', transform: 'rotate(30deg)' },
+  { src: icon2, left: '10%', top: '30%', transform: 'rotate(-20deg)' },
+  { src: icon3, left: '45%', top: '10%', transform: 'rotate(10deg)' },
+]
+
+
 </script>
 
 <template>
@@ -10,13 +68,18 @@ import workExperienceBackground from "../assets/images/windowGreen.png";
     <SectionHeader
       title="What I experienced"
       description="My journey combines substantial professional experience with focused academic study. These experiences — both in the workplace and at university — have shaped the way I think, communicate, and build as a developer."
-    />
+    :left-icons="leftIcons"
+    :right-icons="rightIcons"
+      />
     <div
       class="experiencce-section-main container-fluid flex-grow-1 p-0 d-flex flex-column"
     >
+
       <!-- work related scroll section -->
       <div
         class="card work-experience-card mt-4 d-flex flex-column border border-5 border-dark align-items-center p-4 mb-4"
+        ref="workExperienceCardRef"
+        :class="{'work-experience-card--visible': workExperienceCardVisible}"
       >
         <!-- <img :src="workExperienceBackground" class="work-bg-img" alt="" /> -->
         <h1 class="mb-4 pt-3 display-4 fw-bold">Work</h1>
@@ -77,7 +140,7 @@ import workExperienceBackground from "../assets/images/windowGreen.png";
 
             <div class="bg-warning-subtle p-2">
               <!-- BA related card -->
-              <div class="card w-100 my-2 bg-light">
+              <div class="card w-100 my-2 bg-white">
                 <div class="card-body">
                   <p class="card-title text-decoration-underline">
                     Business Analysis & Coordination
@@ -98,7 +161,7 @@ import workExperienceBackground from "../assets/images/windowGreen.png";
                 </div>
               </div>
               <!-- Technical work related card -->
-              <div class="card w-100 my-2 bg-light">
+              <div class="card w-100 my-2 bg-white">
                 <div class="card-body">
                   <p class="card-title text-decoration-underline">
                     Technical Contributions
@@ -130,7 +193,7 @@ import workExperienceBackground from "../assets/images/windowGreen.png";
                 <div class="accordion-item">
                   <h4 class="accordion-header" id="headingOne">
                     <button
-                      class="accordion-button bg-warning border border-dark border-2"
+                      class="accordion-button bg-primary-subtle border border-dark border-2"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseOne"
@@ -274,10 +337,13 @@ import workExperienceBackground from "../assets/images/windowGreen.png";
         </div>
       </div>
 
+
       <!-- study related scroll section -->
       <div
+        ref="studyExperienceCardRef"
         class="card study-experience-card mt-4 d-flex flex-column border border-5 border-dark align-items-center p-4"
-      >
+        :class="{'study-experience-card--visible': studyExperienceCardVisible}"
+        >
         <h1 class="mb-4 pt-3 display-4 fw-bold">Study</h1>
         <div class="list-and-scroll d-flex flex-row justify-content-between">
           <div id="study-list" class="list-group pe-2">
@@ -321,7 +387,7 @@ import workExperienceBackground from "../assets/images/windowGreen.png";
             </h2>
             <div class="bg-warning-subtle p-2">
               <!-- Team based projects card -->
-              <div class="card w-100 my-2 bg-light">
+              <div class="card w-100 my-2 bg-white">
                 <div class="card-body">
                   <p class="card-title text-decoration-underline">
                     Team-Based University Project
@@ -343,7 +409,7 @@ import workExperienceBackground from "../assets/images/windowGreen.png";
                 </div>
               </div>
               <!-- Individual projects card -->
-              <div class="card w-100 my-2 bg-light">
+              <div class="card w-100 my-2 bg-white">
                 <div class="card-body">
                   <p class="card-title text-decoration-underline">
                     Individual University Project
@@ -366,7 +432,7 @@ import workExperienceBackground from "../assets/images/windowGreen.png";
               </div>
             </div>
             <hr class="border-bottom border-2 border-dark" />
-            <h2 id="study-list-item-2" class="bg-info-subtle px-2 pt-2">
+            <h2 id="study-list-item-2" class="bg-info-subtle px-2 pt-2 pb-3">
               Bachelor of Law<br />
               <span style="font-size: 0.95rem"
                 >- University of Toyama, Japan (2006 - 2012)</span
@@ -440,11 +506,36 @@ li {
   color: rgb(246, 82, 17);
   box-shadow: 2px 2px #000000;
 }
+.list-group-item:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 2px #000000;
+}
+.accordion-button:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 2px #000000;
+}
 .work-experience-card {
   position: relative;
   background-color: var(--work-experience-background);
   box-shadow: 10px 12px var(--shadow-color);
+  opacity: 0;
+  transform: translateX(-40px);
 }
+.work-experience-card--visible.work-experience-card {
+  animation: slideInLeft 0.8s ease-out forwards;
+ 
+}
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .work-bg-img {
   position: absolute;
   inset: 0;
@@ -454,8 +545,7 @@ li {
   z-index: 0;
 }
 .work-experience-card > *:not(img) {
-  /* position: relative; */
-  z-index: 1; /* keeps your content above image */
+  z-index: 1; 
 }
 
 #work-list {
@@ -467,9 +557,29 @@ li {
 #work-scrollspy {
   scroll-padding-top: 80px;
 }
+
+
+
+
+
 .study-experience-card {
   background-color: var(--study-experience-background);
   box-shadow: 10px 12px var(--shadow-color);
+  opacity: 0;
+  transform: translateX(-40px);
+}
+.study-experience-card--visible.study-experience-card {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 #study-list {
   width: 30%;

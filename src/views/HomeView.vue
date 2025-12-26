@@ -46,8 +46,8 @@ onMounted(() => {
     <TextMarqueeSlow text="RYOTA ANDO" />
     <ExperienceSection />
     <TextMarquee 
-    text="This is a continuously ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssscrolling sentence without stopping!"
-    :duration="80"/>
+    text="I’ve taken the long road, and it made my work better."
+    :duration="20"/>
     <ProjectSection />
     <ContactSection />
     <FooterSection />

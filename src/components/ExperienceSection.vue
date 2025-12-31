@@ -4,9 +4,12 @@ import SectionHeader from "./common/SectionHeader.vue";
 import TextMarquee from "./common/TextMarquee.vue";
 import workExperienceBackground from "../assets/images/windowGreen.png";
 // icons for SectionHeader
-import icon1 from '@/assets/images/bellsprout.png'
-import icon2 from '@/assets/images/bellsprout.png'
-import icon3 from '@/assets/images/bellsprout.png'
+import icon1 from '@/assets/images/sectionHeaderIcons/bagSprite.png'
+import icon2 from '@/assets/images/sectionHeaderIcons/computerSprite.png'
+import icon3 from '@/assets/images/sectionHeaderIcons/workIdSprite.png'
+import icon4 from '@/assets/images/sectionHeaderIcons/graduationHatSprite.png'
+import icon5 from '@/assets/images/sectionHeaderIcons/pencileSprite.png'
+import icon6 from '@/assets/images/sectionHeaderIcons/notebookSprite.png'
 
 const workExperienceCardRef = ref(null)
 const studyExperienceCardRef = ref(null)
@@ -48,15 +51,15 @@ onBeforeUnmount(() => {
 })
 
 const leftIcons = [
-  { src: icon1, left: '30%', top: '10%', transform: 'rotate(-20deg)' },
-  { src: icon2, left: '55%', top: '45%', transform: 'rotate(20deg)' },
-  { src: icon3, left: '5%', top: '50%', transform: 'rotate(10deg)' },
+  { src: icon1, left: '25%', top: '10%', transform: 'rotate(-20deg)' },
+  { src: icon2, left: '50%', top: '45%', transform: 'rotate(20deg)' },
+  { src: icon3, left: '0%', top: '50%', transform: 'rotate(10deg)' },
 ]
 
 const rightIcons = [
-  { src: icon1, left: '60%', top: '50%', transform: 'rotate(30deg)' },
-  { src: icon2, left: '10%', top: '30%', transform: 'rotate(-20deg)' },
-  { src: icon3, left: '45%', top: '10%', transform: 'rotate(10deg)' },
+  { src: icon4, left: '50%', top: '50%', transform: 'rotate(30deg)' },
+  { src: icon5, left: '0%', top: '30%', transform: 'rotate(-20deg)' },
+  { src: icon6, left: '38%', top: '10%', transform: 'rotate(10deg)' },
 ]
 
 
@@ -64,7 +67,7 @@ const rightIcons = [
 
 <template>
   <div id="experience" class="section-anchor"></div>
-  <div class="experience-container d-flex flex-column py-5 px-5">
+  <div class="experience-container d-flex flex-column p-md-5 p-3">
     <SectionHeader
       title="What I experienced"
       description="My journey combines substantial professional experience with focused academic study. These experiences — both in the workplace and at university — have shaped the way I think, communicate, and build as a developer."
@@ -491,7 +494,7 @@ li {
 .scrollspy-area {
   max-height: 500px;
 }
-.scrollspy-area h4[id] {
+.scrollspy-area h2[id] {
   scroll-margin-top: 80px;
 }
 .list-group-item {
@@ -515,7 +518,7 @@ li {
   box-shadow: 2px 2px #000000;
 }
 .work-experience-card {
-  position: relative;
+  /* position: relative; */
   background-color: var(--work-experience-background);
   box-shadow: 10px 12px var(--shadow-color);
   opacity: 0;
@@ -597,4 +600,17 @@ li {
   font-style: normal;
   font-size: 0.9em;
 }
+
+@media (max-width: 992px) {
+  #work-list {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  #study-list {
+    display: none;
+  }
+}
+
+
 </style>

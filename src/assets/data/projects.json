@@ -4,10 +4,7 @@
         "isProjectAvailable": true,
         "thumbnail": "portfolio_thumbnail.png",
         "images": [
-            {"imageTitle": "project1_1.png"},
-            {"imageTitle": "project1_2.png"},
-            {"imageTitle": "project1_3.png"},
-            {"imageTitle": "project1_4.png"}
+            {"imageTitle": "project1_1.png"}
            
         ],
         "budges": [
@@ -18,10 +15,10 @@
             {"name": "Bootstrap"}
         ],
         "title": "My Portfolio",
-        "gitLink": "https://www.google.com/",
+        "gitLink": "https://github.com/Ryotankobu/MyPortfolio",
         "deployLink": "https://www.google.com/",
         "modalDescription": "This portfolio was built using Vue.js as a structured follow-up to my first portfolio, with a stronger focus on applying proper development practices. Before implementation, the project was planned and designed in alignment with the Software Development Life Cycle, particularly the Planning, Design, and Development stages, reflecting workflows I have observed through my work at MFDC. A wireframe was created during the design phase and documented in the Statement of Work to guide development. Throughout the project, Bootstrap was used consistently to ensure responsive layout and UI consistency. Development was managed using proper version control practices, with individual tasks defined as issues, work completed in separate branches, and changes merged through pull requests before updating the main branch.",
-        "sowLink": "https://www.google.com/"
+        "sowLink": "https://docs.google.com/document/d/14oJoLES0YOyUHYIma_ij23yTZWWR7mek/edit?usp=sharing&ouid=113567833347978458048&rtpof=true&sd=true"
     },
     {
         "id": "project2",
@@ -42,8 +39,8 @@
         ],
         "title": "E-Commerce Platform",
         "description": "I built this portfolio with Vue.js, applying what I’ve recently learned through self‑study and my work at MFDC. I followed proper SFDC practices—particularly the PLAN, DESIGN, and DEVELOPMENT stages—reflecting the workflow I’ve seen in real projects at MFDC.",
-        "gitLink": "https://www.google.com/",
-        "deployLink": "https://www.google.com/",
+        "gitLink": "https://github.com/Ryotankobu/Mobile_Application_Development_Assignment2",
+        "deployLink": "",
         "modalDescription": "This mobile shopping application is built with React Native and integrates the Fake Store API to provide a realistic e-commerce experience. On the Home screen, users are presented with dynamically fetched product categories. Selecting a category navigates them to a Product List screen, followed by a Product Detail screen where they can view item information and add items to their cart. The Cart screen allows users to manage their selected products, including increasing, decreasing, or removing item quantities. The cart state is fully managed using Redux, ensuring a responsive and centralized state management approach across the application.",
         "sowLink": ""
     },
@@ -62,10 +59,11 @@
             {"name": "React"},
             {"name": "HTML"},
             {"name": "CSS"},
+            {"name": "GitHub"},
             {"name": "Bootstrap"}
         ],
         "title": "(OLD VERSION) My Portfolio",
-       "gitLink": "https://www.google.com/",
+       "gitLink": "https://github.com/Ryotankobu/My_Portfolio",
         "deployLink": "https://www.google.com/",
         "modalDescription": "I built my first portfolio using React during my second year of IT studies while searching for an internship. At the time, I hadn't yet experienced the industry standards I later practiced at MFDC. I initially underestimated the value of the SDLC—specifically the planning and design phases—and jumped straight into coding on day one. This realization inspired me to develop this second version, applying a structured approach to ensure better scalability and a more intentional user experience.",
         "sowLink": ""
@@ -88,7 +86,7 @@
             {"name": "CSS"}
         ],
         "title": "Movie FInder",
-        "gitLink": "https://www.google.com/",
+        "gitLink": "https://github.com/Ryotankobu/Movie-Finder",
         "deployLink": "https://www.google.com/",
         "modalDescription": "This React-based movie discovery app provides an intuitive interface for exploring films using data from the TMDB API. The home screen showcases the top 20 trending movies and genre-specific titles, all fetched dynamically. Users can click on any movie to view detailed information in a modal, including the option to bookmark favorites. The app also includes a title search and genre filter for more targeted browsing. Styling is a mix of Bootstrap and custom CSS, ensuring a responsive layout. This project highlights skills in API integration, React hooks, state management, and component-based design, and serves as a solid base for future enhancements like user authentication or persistent bookmarks.",
         "sowLink": ""

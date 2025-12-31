@@ -5,10 +5,10 @@
 </script>
 
 <template>
-  <div class="hero-container container-fluid py-5 px-5">
+  <div class="hero-container container-fluid p-md-5 p-3">
     <div class="row d-flex align-items-stretch">
       <div
-        class="col-7 px-0 pe-2 d-flex"
+        class="col-xl-7 col-12 d-flex"
       >
         <div class="card left-card w-100 h-100 border-9" style="background: var(--main-background)">
           <div class="card-body p-4 d-flex flex-column">
@@ -46,18 +46,19 @@
            
             
             <div class="row mt-auto">
-              <div class="col-6">
-                <Button title="My Resume"/>
+              <div class="col-lg-6 col-md-6 col-12">
+                <Button title="My Resume" link="https://docs.google.com/document/d/1GPJmZuoX05_Ddj2GP6WGgCdu_A10F2zbjJRz6cF-Rk4/edit?usp=sharing"/>
               </div>
-              <div class="col-6">
-                <Button title="Portfolio SoW"/>
+              <div class="col-lg-6 col-md-6 col-12">
+                <Button title="Portfolio SoW" link="https://docs.google.com/document/d/14oJoLES0YOyUHYIma_ij23yTZWWR7mek/edit?usp=sharing&ouid=113567833347978458048&rtpof=true&sd=true"/>
               </div>
+             
             </div>
          
           </div>
         </div>
       </div>
-      <div class="col-5 px-0 ps-2 d-flex">
+      <div class="col-xl-5 col-12 px-0 ps-2 d-flex">
         <div class="card right-card w-100 h-100" style="background-color: var(--hero-card-yellow);">
           
           <div class="card-body p-4 d-flex flex-column">
@@ -111,10 +112,10 @@
   object-fit: cover; 
   transition: all .3s ease-in-out;
 }
-.hero-image:hover {
+/* .hero-image:hover {
   transform: scale(1.05);
   box-shadow: 5px 5px var(--shadow-color);
-}
+} */
 .right-card {
   box-shadow: 10px 12px  var(--shadow-color);
   /* float: left; */
@@ -169,18 +170,16 @@
 }
 .left-card {
   box-shadow: 10px 12px  var(--shadow-color);
-  /* float: left; */
-  /* transform: rotate(-1deg); */
 }
 .card-info {
   transition: all .3s ease-in-out;
 
 }
-.card-info:hover {
+/* .card-info:hover {
   transform: scale(1.05);
   box-shadow: 5px 5px var(--shadow-color);
 
-}
+} */
 .border-9 {
   border-width: 9px !important;
 }
@@ -220,6 +219,16 @@
  font-family: "Luckiest Guy", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+
+@media (max-width: 576px) {
+  .changeText span {
+    min-height: 70px;
+  }
+  .title-header {
+    font-size: 4em;
+  }
 }
 
 </style>

@@ -52,7 +52,7 @@ onBeforeUnmount(() => {
 <template>
   <div class="row align-items-stretch">
     <!-- header left area -->
-    <div class="col-2 header-left-area icon-area h-100">
+    <div class="col-2 d-none d-xl-block header-left-area icon-area h-100">
       <img 
       v-for="(icon, i) in props.leftIcons"
       :key="'L'+i"
@@ -69,13 +69,13 @@ onBeforeUnmount(() => {
     <!-- header middle area -->
     <div 
     ref="headerRef"
-    class="section-header text-center col-8 pt-4 pb-4 mb-4"
+    class="section-header text-center col-12 col-xl-8 pt-4 pb-4 mb-4"
     :class="{'section-header--visible': isVisible}">
         <h1 class="section-header-title pb-3 display-2 fw-bold">{{ props.title }}</h1>
         <p class="section-header-description">{{ props.description }}</p>
     </div>
     <!-- header left area -->
-    <div class="col-2 header-right-area icon-area h-100">
+    <div class="col-2 d-none d-xl-block header-right-area icon-area h-100">
       <img 
       v-for="(icon, i) in props.rightIcons"
       :key="'L'+i"

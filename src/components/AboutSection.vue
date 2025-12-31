@@ -72,7 +72,7 @@ const rightIcons = [
 
 <template>
   <div id="about" class="section-anchor"></div>
-  <div class="about-container d-flex flex-column py-5 px-5 mb-5">
+  <div class="about-container d-flex flex-column p-3 p-md-5 mb-5">
     <SectionHeader
       title="Know More About Me"
       description="As a mature‑age developer, I bring discipline, clarity, and a practical mindset to my work. My skills span front‑end development, business analysis, and communication — shaped by both technical training and diverse professional experience."
@@ -83,7 +83,7 @@ const rightIcons = [
       <div class="row h-100">
         <div 
         ref="leftColRef"
-        class="col-4 p-0 pe-2 about-col about-col--left"
+        class="col-xl-4 col-12 p-0 pe-2 about-col about-col--left"
         :class="{ 'about-col--visible': leftVisible }">
           <div
             class="card left-card p-4 h-100 d-flex flex-column justify-content-between border border-3 border-success" style="background-color: var(--left-about-card);"
@@ -103,11 +103,11 @@ const rightIcons = [
         </div>
 
         <div 
-        class="col-8 h-100 p-0 ps-2 about-col about-col--right"
+        class="col-xl-8 col-12 h-100 p-0 ps-2 about-col about-col--right"
         ref="rightColRef"
         :class="{ 'about-col--visible': rightVisible }">
           <div class="card h-100 p-4 d-flex flex-column justify-content-between border border-9 border-warning" style="background-color: var(--main-background);">
-            <div class="skill-button-area d-flex flex-row justify-content-around">
+            <div class="skill-button-area d-flex flex-column flex-lg-row justify-content-around">
                 <SkillButton title="Programming" :currentStatus=selectedSkillType class="mx-2" @click="handleSkillCategory('programming')"/>
                 <SkillButton title="BA" :currentStatus=selectedSkillType class="mx-2" @click="handleSkillCategory('ba')"/>
                 <SkillButton title="Others" :currentStatus=selectedSkillType class="mx-2" @click="handleSkillCategory('other')"/>
@@ -166,13 +166,11 @@ const rightIcons = [
 .about-col--left {
   opacity: 0;
   transform: translateX(-40px);
-  /* box-shadow: 10px 12px  var(--shadow-color); */
 }
 
 .about-col--right {
   opacity: 0;
   transform: translateX(40px);
-  /* box-shadow: 10px 12px  var(--shadow-color); */
 }
 
 /* When visible, play animation */

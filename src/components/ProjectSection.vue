@@ -4,9 +4,12 @@ import sampleImage from "@/assets/images/bellsprout.png";
 import projects from "@/assets/data/projects.json";
 import { ref, computed } from "vue";
 // icons for SectionHeader
-import icon1 from '@/assets/images/bellsprout.png'
-import icon2 from '@/assets/images/bellsprout.png'
-import icon3 from '@/assets/images/bellsprout.png'
+import icon1 from '@/assets/images/sectionHeaderIcons/headphoneSprite.png'
+import icon2 from '@/assets/images/sectionHeaderIcons/coffeeSprite.png'
+import icon3 from '@/assets/images/sectionHeaderIcons/monitorSprite.png'
+import icon4 from '@/assets/images/sectionHeaderIcons/phoneSprite.png'
+import icon5 from '@/assets/images/sectionHeaderIcons/keyboardSprite.png'
+import icon6 from '@/assets/images/sectionHeaderIcons/wireframeSprite.png'
 
 const modalShowingProjectId = ref("");
 const modalContents = computed(() =>
@@ -35,15 +38,15 @@ const truncatedDescription = computed(() => {
 )
 
 const leftIcons = [
-  { src: icon1, left: '30%', top: '10%', transform: 'rotate(-20deg)' },
-  { src: icon2, left: '55%', top: '45%', transform: 'rotate(20deg)' },
-  { src: icon3, left: '5%', top: '50%', transform: 'rotate(10deg)' },
+  { src: icon1, left: '30%', top: '0%', transform: 'rotate(-20deg)' },
+  { src: icon2, left: '55%', top: '35%', transform: 'rotate(20deg)' },
+  { src: icon3, left: '5%', top: '40%', transform: 'rotate(10deg)' },
 ]
 
 const rightIcons = [
-  { src: icon1, left: '60%', top: '50%', transform: 'rotate(30deg)' },
-  { src: icon2, left: '10%', top: '30%', transform: 'rotate(-20deg)' },
-  { src: icon3, left: '45%', top: '10%', transform: 'rotate(10deg)' },
+  { src: icon4, left: '50%', top: '40%', transform: 'rotate(30deg)' },
+  { src: icon5, left: '0%', top: '20%', transform: 'rotate(-20deg)' },
+  { src: icon6, left: '35%', top: '0%', transform: 'rotate(10deg)' },
 ]
 </script>
 
@@ -61,7 +64,7 @@ const rightIcons = [
         <div class="row g-5">
           <div
             v-for="(project, index) in projects"
-            class="col-4"
+            class="col-xl-4 col-md-6 col-12 p-0 p-md-2"
             :key="project.id || project.title"
           >
             <div
@@ -118,6 +121,7 @@ const rightIcons = [
                       <i class="fa-brands fa-github"></i>
                     </a>
                     <a
+                    v-if="project?.deployLink"
                       :href="project.deployLink"
                       class="btn btn-success"
                       target="_blank"
@@ -249,6 +253,7 @@ const rightIcons = [
               <i class="fa-brands fa-github"></i>
             </a>
             <a
+               v-if="modalContents?.deployLink"
               :href="modalContents?.deployLink"
               class="btn btn-success me-3"
               target="_blank"
@@ -261,7 +266,7 @@ const rightIcons = [
             </a>
             <a
               v-if="modalContents?.sowLink"
-              :href="modalContents?.deployLink"
+              :href="modalContents?.sowLink"
               class="btn btn-warning"
               target="_blank"
               rel="noopener"
@@ -295,7 +300,7 @@ const rightIcons = [
 }
 
 .card:hover {
-  transform: scale(1.08);
+  transform: scale(1.04);
   box-shadow: 5px 5px;
 }
 

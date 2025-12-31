@@ -96,7 +96,6 @@ const props = defineProps({
   font-weight: 400;
   font-style: normal;
   border-radius: 50% 10% 50% 10% / 10% 50% 10% 50%;
-
 }
 .nav-item.active {
   transform: rotate(4deg);
@@ -108,5 +107,34 @@ h2 {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+@media (max-width: 576px) {
+  h2 {
+    font-size: 1rem;
+  }
+  .navbar-nav {
+    padding: 10px;
+
+  }
+  .nav-item {
+  font-weight: 200;
+  font-size: 1rem;
+  }
+  .nav-item.active {
+  transform: rotate(2deg);
+}
+}
+@media (max-width: 1100px) {
+  .nav-item {
+  font-weight: 200;
+  font-size: 0.8rem;
+  margin: 5px;
+  }
+  .nav-item.active {
+  transform: rotate(2deg);
+}
+.navbar-collapse  {
+  margin-top: 20px;
+}
 }
 </style>

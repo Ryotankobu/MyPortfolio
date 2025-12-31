@@ -3,9 +3,12 @@
 import SectionHeader from "./common/SectionHeader.vue";
 import sampleImage from "@/assets/images/bellsprout.png";
 // icons for SectionHeader
-import icon1 from '@/assets/images/bellsprout.png'
-import icon2 from '@/assets/images/bellsprout.png'
-import icon3 from '@/assets/images/bellsprout.png'
+import icon1 from '@/assets/images/sectionHeaderIcons/chatSprite.png'
+import icon2 from '@/assets/images/sectionHeaderIcons/mailSprite.png'
+import icon3 from '@/assets/images/sectionHeaderIcons/mapSprite.png'
+import icon4 from '@/assets/images/sectionHeaderIcons/housePhoneSprite.png'
+import icon5 from '@/assets/images/sectionHeaderIcons/mailSprite1.png'
+import icon6 from '@/assets/images/sectionHeaderIcons/chainSprite.png'
 
 const contactDetailsBoxRef = ref(null)
 const contactFormBoxRef = ref(null)
@@ -47,22 +50,22 @@ onBeforeUnmount(() => {
 })
 
 const leftIcons = [
-  { src: icon1, left: '30%', top: '10%', transform: 'rotate(-20deg)' },
-  { src: icon2, left: '55%', top: '45%', transform: 'rotate(20deg)' },
-  { src: icon3, left: '5%', top: '50%', transform: 'rotate(10deg)' },
+  { src: icon1, left: '30%', top: '0%', transform: 'rotate(-20deg)' },
+  { src: icon2, left: '45%', top: '35%', transform: 'rotate(20deg)' },
+  { src: icon3, left: '0%', top: '40%', transform: 'rotate(10deg)' },
 ]
 
 const rightIcons = [
-  { src: icon1, left: '60%', top: '50%', transform: 'rotate(30deg)' },
-  { src: icon2, left: '10%', top: '30%', transform: 'rotate(-20deg)' },
-  { src: icon3, left: '45%', top: '10%', transform: 'rotate(10deg)' },
+  { src: icon4, left: '50%', top: '40%', transform: 'rotate(30deg)' },
+  { src: icon5, left: '0%', top: '20%', transform: 'rotate(-20deg)' },
+  { src: icon6, left: '35%', top: '-10%', transform: 'rotate(80deg)' },
 ]
 </script>
 
 <template>
   <div id="contact" class="section-anchor"></div>
-  <div class="contact-container">
-    <div class="experience-container d-flex flex-column py-5 px-5">
+  <div class="contact-container  d-flex flex-column p-md-5">
+   
       <SectionHeader 
       title="Contact Me"
       description="If you’d like to get in touch, I’d be happy to hear from you. Whether you have an opportunity to discuss, feedback to share, or simply want to connect, feel free to reach out through the form below. I’ll respond as soon as I can" 
@@ -70,7 +73,7 @@ const rightIcons = [
       :right-icons="rightIcons"/>
       <div class="contact-section-main container-fluid">
         <div class="row">
-          <div class="col-5 ps-0">
+          <div class="col-lg-5 col-12 mb-lg-0 mb-3">
             <!-- left side area -->
             <div
               class="card contact-details-box border rounded border-3 border-dark p-3 d-flex flex-column justify-content-between"
@@ -130,21 +133,21 @@ const rightIcons = [
                 <div class="icon-box">
                   <div class="row">
                     <div class="col-1">
-                      <a href="https://www.google.com"  target="_blank" rel="noopener"
+                      <a href="https://github.com/Ryotankobu"  target="_blank" rel="noopener"
                         data-toggle="tooltip" data-placement="bottom" title="GitHub">
                         <i class="fa-brands fa-square-github fa-xl text-dark"></i>
                       </a>
                       
                     </div>
                     <div class="col-1">
-                      <a href="https://www.google.com"  target="_blank" rel="noopener"
+                      <a href="https://www.linkedin.com/in/ryota-ando-573569276/"  target="_blank" rel="noopener"
                         data-toggle="tooltip" data-placement="bottom" title="LinkedIn">
                         <i class="fa-brands fa-linkedin fa-xl text-dark"></i>
                       </a>
                       
                     </div>
                     <div class="col-1">
-                      <a href="https://www.google.com"  target="_blank" rel="noopener"
+                      <a href="https://docs.google.com/document/d/1GPJmZuoX05_Ddj2GP6WGgCdu_A10F2zbjJRz6cF-Rk4/edit?usp=sharing"  target="_blank" rel="noopener"
                         data-toggle="tooltip" data-placement="bottom" title="Resume">
                         <i class="fa-solid fa-file fa-xl text-dark"></i>
                       </a>
@@ -157,7 +160,7 @@ const rightIcons = [
           </div>
 
           <!-- right area Input section -->
-          <div class="col-7 pe-0">
+          <div class="col-lg-7 col-12 mb-md-0 mb-3">
             <div class="contact-form-box border rounded border-dark border-3 p-3 h-100"
             ref="contactFormBoxRef"
             :class="{ 'contact-form-box--visible': contactFormBoxVisible }"
@@ -184,13 +187,12 @@ const rightIcons = [
                   <textarea class="form-control border border-dark border-2" id="message" rows="5" name="message" placeholder="Message"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-warning w-100 mt-auto border border-dark border-2">Send</button>
+                <button type="submit" class="btn btn-warning w-100 mt-lg-auto mt-2 border border-dark border-2">Send</button>
               </form>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 

@@ -93,6 +93,15 @@ font-family: "Press Start 2P", system-ui;
   font-size: 0.8rem;
 }
 
+@media (max-width: 992px) {
+  .skill-button.active {
+    transform: rotate(0deg);
+  }
+  .skill-button {
+    margin-top: 5px;
+  }
+}
+
 
 
 </style>

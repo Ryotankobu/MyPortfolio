@@ -1,156 +1,202 @@
 <script setup>
-    defineProps({
-        title: String
-    })
+const props = defineProps({
+  title: String,
+  link: String,
+});
 
+function openLink() {
+    window.open(props.link, "_blank")
+
+
+}
 </script>
 
 <template>
-    <div class="wrapper">
-        <button type="button" class="btn w-100"><span>{{ title }}</span></button>
-
-    </div>
-    
+  <div class="wrapper">
+    <button
+      type="button"
+      class="btn w-100"
+      @click="openLink"
+    >
+      <span>{{ props.title }}</span>
+    </button>
+  </div>
 </template>
 
 <style scoped>
-    .wrapper {
- perspective: 500px;
- transform: rotatex(10deg);
- animation: rotateAngle 6s linear infinite;
- margin: auto;
- width: auto;
+.wrapper {
+  perspective: 500px;
+  transform: rotatex(10deg);
+  animation: rotateAngle 6s linear infinite;
+  margin: auto;
+  width: auto;
 }
 
 button {
- display: block;
- position: relative;
- margin: 0.5em 0;
- padding: 0.8em 2.2em;
- cursor: pointer;
- background: var(--button-background);
- border: none;
- border-radius: 0.4em;
- text-transform: uppercase;
- font-size: 19px;
- font-family: "Work Sans", sans-serif;
- font-weight: 1000;
- letter-spacing: 0.04em;
- mix-blend-mode: color-dodge;
- perspective: 500px;
- transform-style: preserve-3d;
+  display: block;
+  position: relative;
+  margin: 0.5em 0;
+  padding: 0.8em 2.2em;
+  cursor: pointer;
+  background: var(--button-background);
+  border: none;
+  border-radius: 0.4em;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 1000;
+  letter-spacing: 0.04em;
+  mix-blend-mode: color-dodge;
+  perspective: 500px;
+  transform-style: preserve-3d;
 }
 button span {
   mix-blend-mode: none;
-  color: var(--navbar-background); 
+  color: var(--navbar-background);
 }
 
-button:before, button:after {
- --z: 0px;
- position: absolute;
- top: 0;
- left: 0;
- display: block;
- content: "";
- width: 100%;
- height: 100%;
- opacity: 0;
- mix-blend-mode: color-dodge;
- border-radius: inherit;
- transform-style: preserve-3d;
- transform: translate3d(calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
+button:before,
+button:after {
+  --z: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  mix-blend-mode: color-dodge;
+  border-radius: inherit;
+  transform-style: preserve-3d;
+  transform: translate3d(
+    calc(var(--z) * 0px),
+    calc(var(--z) * 0px),
+    calc(var(--z) * 0px)
+  );
 }
 
 button span {
- mix-blend-mode: none;
- display: block;
+  mix-blend-mode: none;
+  display: block;
 }
 
 button:after {
- background-color: #5D00FF;
+  background-color: #5d00ff;
 }
 
 button:before {
- background-color: #FF1731;
+  background-color: #ff1731;
 }
 
 button:hover {
- background-color: #FFF65B;
- transition: background 0.3s 0.1s;
+  background-color: #fff65b;
+  transition: background 0.3s 0.1s;
 }
 
 button:hover:before {
- --z: 0.04;
- animation: translateWobble 2.2s ease forwards;
+  --z: 0.04;
+  animation: translateWobble 2.2s ease forwards;
 }
 
 button:hover:after {
- --z: -0.06;
- animation: translateWobble 2.2s ease forwards;
+  --z: -0.06;
+  animation: translateWobble 2.2s ease forwards;
 }
 
 @keyframes rotateAngle {
- 0% {
-  transform: rotateY(0deg) rotateX(10deg);
-  -webkit-animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
-  animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
- }
+  0% {
+    transform: rotateY(0deg) rotateX(10deg);
+    -webkit-animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+    animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+  }
 
- 25% {
-  transform: rotateY(20deg) rotateX(10deg);
- }
+  25% {
+    transform: rotateY(20deg) rotateX(10deg);
+  }
 
- 50% {
-  transform: rotateY(0deg) rotateX(10deg);
-  -webkit-animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
-  animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
- }
+  50% {
+    transform: rotateY(0deg) rotateX(10deg);
+    -webkit-animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+    animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+  }
 
- 75% {
-  transform: rotateY(-20deg) rotateX(10deg);
- }
+  75% {
+    transform: rotateY(-20deg) rotateX(10deg);
+  }
 
- 100% {
-  transform: rotateY(0deg) rotateX(10deg);
- }
+  100% {
+    transform: rotateY(0deg) rotateX(10deg);
+  }
 }
 
 @keyframes translateWobble {
- 0% {
-  opacity: 0;
-  transform: translate3d(calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
- }
+  0% {
+    opacity: 0;
+    transform: translate3d(
+      calc(var(--z) * 0px),
+      calc(var(--z) * 0px),
+      calc(var(--z) * 0px)
+    );
+  }
 
- 16% {
-  transform: translate3d(calc(var(--z) * 160px), calc(var(--z) * 160px), calc(var(--z) * 160px));
- }
+  16% {
+    transform: translate3d(
+      calc(var(--z) * 160px),
+      calc(var(--z) * 160px),
+      calc(var(--z) * 160px)
+    );
+  }
 
- 28% {
-  opacity: 1;
-  transform: translate3d(calc(var(--z) * 70px), calc(var(--z) * 70px), calc(var(--z) * 70px));
- }
+  28% {
+    opacity: 1;
+    transform: translate3d(
+      calc(var(--z) * 70px),
+      calc(var(--z) * 70px),
+      calc(var(--z) * 70px)
+    );
+  }
 
- 44% {
-  transform: translate3d(calc(var(--z) * 130px), calc(var(--z) * 130px), calc(var(--z) * 130px));
- }
+  44% {
+    transform: translate3d(
+      calc(var(--z) * 130px),
+      calc(var(--z) * 130px),
+      calc(var(--z) * 130px)
+    );
+  }
 
- 59% {
-  transform: translate3d(calc(var(--z) * 85px), calc(var(--z) * 85px), calc(var(--z) * 85px));
- }
+  59% {
+    transform: translate3d(
+      calc(var(--z) * 85px),
+      calc(var(--z) * 85px),
+      calc(var(--z) * 85px)
+    );
+  }
 
- 73% {
-  transform: translate3d(calc(var(--z) * 110px), calc(var(--z) * 110px), calc(var(--z) * 110px));
- }
+  73% {
+    transform: translate3d(
+      calc(var(--z) * 110px),
+      calc(var(--z) * 110px),
+      calc(var(--z) * 110px)
+    );
+  }
 
- 88% {
-  opacity: 1;
-  transform: translate3d(calc(var(--z) * 90px), calc(var(--z) * 90px), calc(var(--z) * 90px));
- }
+  88% {
+    opacity: 1;
+    transform: translate3d(
+      calc(var(--z) * 90px),
+      calc(var(--z) * 90px),
+      calc(var(--z) * 90px)
+    );
+  }
 
- 100% {
-  opacity: 1;
-  transform: translate3d(calc(var(--z) * 100px), calc(var(--z) * 100px), calc(var(--z) * 100px));
- }
+  100% {
+    opacity: 1;
+    transform: translate3d(
+      calc(var(--z) * 100px),
+      calc(var(--z) * 100px),
+      calc(var(--z) * 100px)
+    );
+  }
 }
-    
 </style>

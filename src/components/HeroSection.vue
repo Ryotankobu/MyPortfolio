@@ -8,7 +8,7 @@
   <div class="hero-container container-fluid p-md-5 p-3">
     <div class="row d-flex align-items-stretch">
       <div
-        class="col-xl-7 col-12 d-flex"
+        class="col-xl-8 col-12 d-flex"
       >
         <div class="card left-card w-100 h-100 border-9" style="background: var(--main-background)">
           <div class="card-body p-4 d-flex flex-column">
@@ -47,7 +47,7 @@
             
             <div class="row mt-auto">
               <div class="col-lg-6 col-md-6 col-12">
-                <Button title="My Resume" link="https://docs.google.com/document/d/1GPJmZuoX05_Ddj2GP6WGgCdu_A10F2zbjJRz6cF-Rk4/edit?usp=sharing"/>
+                <Button title="My Resume" link="https://drive.google.com/file/d/1t6PuCYUVX6PrNz6i2LbSpijurPvGhiez/view?usp=sharing"/>
               </div>
               <div class="col-lg-6 col-md-6 col-12">
                 <Button title="Portfolio SoW" link="https://docs.google.com/document/d/14oJoLES0YOyUHYIma_ij23yTZWWR7mek/edit?usp=sharing&ouid=113567833347978458048&rtpof=true&sd=true"/>
@@ -58,16 +58,26 @@
           </div>
         </div>
       </div>
-      <div class="col-xl-5 col-12 px-0 ps-2 d-flex">
+      <div class="col-xl-4 offset-xl-0 offset-1 col-10 px-0 ps-2 d-flex">
         <div class="card right-card w-100 h-100" style="background-color: var(--hero-card-yellow);">
           
           <div class="card-body p-4 d-flex flex-column">
-            <img :src="sampleImage" class="card-img-top w-100 hero-image mx-auto d-block border border-2 border-dark" alt="..." />
+            <div class="card-img-container">
+              <img :src="sampleImage" class="card-img-top w-100 hero-image mx-auto d-block border border-2 border-dark" alt="..." />
+              <div class="skill-text-container w-100 p-1">
+                <p class="skill-box bg-success p-2 rounded-circle">React</p>
+                <p class="skill-box bg-success p-2 rounded-circle">Vue.js</p>
+                <p class="skill-box bg-success p-2 rounded-circle">HTML/CSS</p>
+                <p class="skill-box bg-success p-2 rounded-circle">Bootstrap</p>
+              </div>
+
+            </div>
+            
             <div class="border rounded mt-4 mb-3 card-info">
               <div class="row p-3">
                 <div class="col-6">
                   <h4 class="my-card-title">
-                    Australia Visa : 
+                    Australia Visa: 
                   </h4>
                 </div>
                 <div class="col-6">
@@ -81,7 +91,7 @@
               <div class="row p-3">
                 <div class="col-6">
                   <h4 class="my-card-title">
-                    Nationality : 
+                    Nationality: 
                   </h4>
                 </div>
                 <div class="col-6">
@@ -106,6 +116,33 @@
 <style scoped>
 .hero-container {
 }
+.card-img-container {
+  position: relative;
+}
+.skill-text-container {
+  position: absolute;
+  top: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+.skill-box {
+  flex: 1;
+  text-align: center;
+  opacity: 0.9;
+   font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9em;
+  color: white;
+  border-style: solid;
+  border-color: black;
+  
+}
+
 .hero-image {
   width: 100%;
   height: 100%;

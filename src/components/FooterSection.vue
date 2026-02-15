@@ -28,7 +28,7 @@
                       
                     </div>
                     <div class="mx-2">
-                      <a href="https://docs.google.com/document/d/1GPJmZuoX05_Ddj2GP6WGgCdu_A10F2zbjJRz6cF-Rk4/edit?usp=sharing"  target="_blank" rel="noopener"
+                      <a href="https://drive.google.com/file/d/1t6PuCYUVX6PrNz6i2LbSpijurPvGhiez/view?usp=sharing"  target="_blank" rel="noopener"
                         data-toggle="tooltip" data-placement="bottom" title="Resume">
                         <i class="fa-solid fa-file fa-xl text-light"></i>
                       </a>
